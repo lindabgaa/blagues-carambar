@@ -12,7 +12,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000/api",
+        url: "https://blagues-carambar-api.onrender.com/api/v1",
       },
     ],
   },
@@ -22,7 +22,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 const swagger = (app) => {
-  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+  app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 };
 
 module.exports = swagger;
